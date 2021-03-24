@@ -20,17 +20,15 @@ type
     procedure DoMoveFront;
     procedure DoMoveRight;
     procedure DoMoveLeft;
-    procedure HandBrake (Speed:integer);
+    procedure HandBrake;
     constructor Create(Name: string; Speed: integer);
     destructor Destroy;
  end;
 
  TCickle = class(TInterfacedObject, IMechanicDevice)
   private
-    FBell : boolean;
     function GetName: integer;
     procedure SetName(const Value: integer);
-    procedure DinDon(Call:boolean);
   public
     FName : string;
     FSpeed : integer;
@@ -38,6 +36,7 @@ type
     procedure DoMoveFront;
     procedure DoMoveRight;
     procedure DoMoveLeft;
+    procedure HandBrake;
     constructor Create(Name: string; Speed: integer);
     destructor Destroy;
  end;
@@ -79,9 +78,9 @@ begin
 end;
 
 procedure TCar.DoMoveFront;
-  begin
-    inc(FSpeed, 2);
-  end;
+begin
+
+end;
 
 procedure TCar.DoMoveLeft;
 begin
@@ -99,9 +98,9 @@ begin
 end;
 
 procedure TCar.HandBrake;
-  begin
-    dec(Speed,5);
-  end;
+begin
+
+end;
 
 procedure TCar.SetName(const Value: integer);
 begin
@@ -172,15 +171,10 @@ begin
 
 end;
 
-procedure TCickle.DinDon(Call: boolean);
-  begin
-    FBell := Call;
-  end;
-
 procedure TCickle.DoMoveFront;
-  begin
+begin
 
-  end;
+end;
 
 procedure TCickle.DoMoveLeft;
 begin
@@ -193,6 +187,11 @@ begin
 end;
 
 function TCickle.GetName: integer;
+begin
+
+end;
+
+procedure TCickle.HandBrake;
 begin
 
 end;

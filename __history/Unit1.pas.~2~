@@ -79,9 +79,9 @@ begin
 end;
 
 procedure TCar.DoMoveFront;
-  begin
-    inc(FSpeed, 2);
-  end;
+begin
+
+end;
 
 procedure TCar.DoMoveLeft;
 begin

@@ -8,9 +8,12 @@ uses
   System.SysUtils,
   Unit1 in 'Unit1.pas';
 
+var
+  TestValue : TTestInt;
 begin
   try
-
+    TestValue:=TTestInt.Create;
+    TestValue.TestMulti;
     Readln;
   except
     on E: Exception do
